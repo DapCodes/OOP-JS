@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Constructor Function</title>
+</head>
+<body>
+    
+
+    <script>
+
+        function Mobil(){
+            this.horsePower = "";
+            this.modelYear = "";
+        }
+
+        const marcedes = new Mobil();
+        marcedes.horsePower = 250;
+        marcedes.modelYear = 1998;
+
+        const toyota = new Mobil();
+        toyota.horsePower = 230;
+        toyota.modelYear = 2008;
+
+        console.log (marcedes);
+        console.log (toyota);
+
+
+    </script>
+</body>
+</html>

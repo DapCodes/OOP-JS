@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parameter Constructor Function</title>
+</head>
+<body>
+    
+
+    <script>
+        // Class dengan Parameter
+        function Mobil(horePower, modelYear){
+            // Property
+            this.horsePower = horePower;
+            this.modelYear = modelYear;
+            this.tipeMobil = function (name) {
+                console.info(`Mobil ini adalah type${name}`);
+            }
+        }
+
+        // Object, dengan Argument
+        const marcedes = new Mobil(200, 1998);
+        marcedes.tipeMobil("Marcedes 1998");
+
+        const toyota = new Mobil(250, 2008);
+        toyota.tipeMobil("Toyota 2008");
+        
+
+        // Menampilkan
+        console.log(marcedes);
+        console.log (toyota);
+        
+
+
+    </script>
+</body>
+</html>
