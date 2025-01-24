@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prototype</title>
+    <title>Property Prototype</title>
 </head>
 <body>
     
@@ -19,12 +19,22 @@
             }
         }
 
+        Person.prototype.sayBye = function() {
+            console.info("Good Bye");
+        }
+
+        Person.prototype.run = function() {
+            console.info(`${this.firstName} Is running`);
+        }
+
         const daffa = new Person ('Daffa', 'Ramadhan');
         const rio = new Person ('Rio', 'Oktora');
 
         console.log (daffa);
-        console.log (rio);
+        daffa.sayBye();
 
+        console.log (rio);
+        rio.run();
 
     </script>
 </body>

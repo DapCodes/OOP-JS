@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance Prototype</title>
+</head>
+<body>
+    
+
+    <script>
+
+        // Manager.prototype = Employee.prototype ((SALAH))
+
+        Manager.prototype = Object.create(Employee.prototype);
+
+        Manager.prototype.sayHello = function (name) {
+            console.info (`Hello ${name} Im your Manager. Nice To Meet You`);
+        }
+
+        Employee.prototype.sayHello = function (name) {
+            console.info (`Hello ${name} Im your Employee. Nice To Meet You`);
+        }
+
+
+        const manager = new Manager();
+        manager.sayHello("Daffa");
+
+        const employee = new Employee();
+        manager.sayHello("Daffa");
+
+
+    </script>
+</body>
+</html>
